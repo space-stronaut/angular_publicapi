@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+  <div class="clr-row">
+    <div class="card">
+        <h3 class="card-header">Edit - <a routerLink="/" class="btn btn-primary">Back</a></h3>
+        <div class="card-block">
+            <div class="card-text">
+                <form (submit)="updateProduct(product.id, editProduct)">
+                    <input [(ngModel)]="editProduct.title" placeholder="Title" value="{{ product.title }}" required><br>
+                    <input [(ngModel)]="editProduct.description" placeholder="Description" required value="{{ product.description }}"><br>
+                    <input [(ngModel)]="editProduct.price" placeholder="Price" required value="{{ product.price }}"><br>
+                    <input [(ngModel)]="editProduct.discount" placeholder="Discount" value="{{ product.discountPercentage }}" required><br>
+                    <input [(ngModel)]="editProduct.stock" placeholder="Stock" value="{{ product.stock }}" required><br>
+                    <input [(ngModel)]="editProduct.brand" placeholder="Brand" value="{{ product.brand }}" required><br>
+                    <select name="" [(ngModel)]="editProduct.category" id="">
+                        <option value="">Choose Category</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="phone" >Phone</option>
+                        <option value="tablet">Tablet</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>

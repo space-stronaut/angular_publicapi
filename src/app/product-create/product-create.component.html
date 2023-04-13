@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="clr-row">
+        <div class="card">
+            <h3 class="card-header">Create - <a routerLink="/" class="btn btn-primary">Back</a></h3>
+            <div class="card-block">
+                <div class="card-text">
+                    <form (submit)="addProduct(newProduct)">
+                        <input [(ngModel)]="newProduct.title" placeholder="Title" required><br>
+                        <input [(ngModel)]="newProduct.description" placeholder="Description" required><br>
+                        <input [(ngModel)]="newProduct.price" placeholder="Price" required><br>
+                        <input [(ngModel)]="newProduct.discount" placeholder="Discount" required><br>
+                        <input [(ngModel)]="newProduct.stock" placeholder="Stock" required><br>
+                        <input [(ngModel)]="newProduct.brand" placeholder="Brand" required><br>
+                        <select name="" [(ngModel)]="newProduct.category" id="">
+                            <option value="">Choose Category</option>
+                            <option value="laptop">Laptop</option>
+                            <option value="phone">Phone</option>
+                            <option value="tablet">Tablet</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+</div>

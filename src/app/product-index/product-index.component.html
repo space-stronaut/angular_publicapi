@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div>
+        <input [(ngModel)]="query" (input)="onSearch()">
+        <button (click)="onSearch()">Search</button>
+      </div>
+    <!-- <div class="clr-col-lg-5 clr-col-12"> -->
+        <div class="card">
+            <h3 class="card-header">Daftar Produk - <a routerLink="/create" class="btn btn-primary">New</a></h3>
+            <div class="card-block">
+                <!-- <h4 class="card-title">Block</h4> -->
+                <div class="card-text">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nama Produk</th>
+                                <th>Harga</th>
+                                <th>Action</th>
+                              </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let product of products.slice(startIndex, endIndex)">
+                                <td>{{ product.id }}</td>
+                                <td>{{ product.title }}</td>
+                                <td>{{ product.price }}</td>
+                                <td><button (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button>
+                                   <a [routerLink]="['product', product.id]" class="btn btn-success">Detail Produk</a>
+                                   <a [routerLink]="['product/edit', product.id]" class="btn btn-warning">Edit Produk</a>
+                                   </td>
+                              </tr>
+                        </tbody>
+                       </table>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>
+                    <button (click)="setPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+                    <span>{{ currentPage }} / {{ totalPages }}</span>
+                    <button (click)="setPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+                  </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+

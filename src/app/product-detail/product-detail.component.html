@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="clr-row">
+    <div class="clr-col-lg-5 clr-col-12">
+        <div class="card">
+            <h3 class="card-header">{{ product.title }} - <a routerLink="/" class="btn btn-success">Back</a></h3>
+            <div class="card-block">
+                <h4 class="card-title">{{ product.description }}</h4>
+                <div class="card-text">
+                    Price : {{product.price}}<br>
+                    Discount : {{product.discountPercentage + "%"}}<br>
+                    Stock : {{product.stock + " Pcs"}}<br>
+                    Brand : {{product.brand}}<br>
+                    Category : {{product.category}}
+                </div>
+            </div>
+            <div class="card-footer">
+                <div *ngFor="let image of product.images">
+                    <img src="{{ image }}" alt="My Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

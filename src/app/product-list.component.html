@@ -1,0 +1,14 @@
+<!-- product-list.component.html -->
+<h1>Daftar Produk</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nama Produk</th>
+    <th>Harga</th>
+  </tr>
+  <tr *ngFor="let product of datas">
+    <td>{{ product.id }}</td>
+    <td>{{ product.name }}</td>
+    <td>{{ product.price }}</td>
+  </tr>
+</table>

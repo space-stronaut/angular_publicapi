@@ -1,0 +1,30 @@
+  <div class="clr-row">
+    <!-- <div class="clr-col-lg-5 clr-col-md-8 clr-col-12"> -->
+        <div class="card">
+            <h3 class="card-header">Login</h3>
+            <div class="card-block">
+                <!-- <h4 class="card-title">Block</h4> -->
+                <div class="card-text">
+                    <form (ngSubmit)="onSubmit()">
+                        <clr-input-container>
+                            <label>Username</label>
+                            <input clrInput placeholder="Username" name="name" [(ngModel)]="username" type="text"/>
+                          </clr-input-container>
+                          <clr-input-container>
+                            <label>Password</label>
+                            <input clrInput placeholder="Password" name="name" [(ngModel)]="password" type="password"/>
+                          </clr-input-container>
+                        <!-- Form untuk mengumpulkan data masuk (username, password) -->
+                        <!-- <input [(ngModel)]="username" name="username" type="text" placeholder="Username">
+                        <input [(ngModel)]="password" name="password" type="password" placeholder="Password"> -->
+                        <button type="submit" class="btn btn-primary">Login</button>
+                      </form>
+                </div>
+            </div>
+            <!-- <div class="card-footer">
+                <button class="btn btn-sm btn-link">Footer Action 1</button>
+                <button class="btn btn-sm btn-link">Footer Action 2</button>
+            </div> -->
+        </div>
+    <!-- </div> -->
+</div>
